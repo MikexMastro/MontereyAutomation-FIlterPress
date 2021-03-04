@@ -1,0 +1,1 @@
+Default behaviorActivation: line dd4c=1 must be included in configuration filecfg.txt (this is the case in the factorysetting). Change is not activated until after the controller is restarted.Effect: CANopen is activated; the rotary switch serves to set the CANopen node-ID. The value of thisswitch is added to the value of switch S2.

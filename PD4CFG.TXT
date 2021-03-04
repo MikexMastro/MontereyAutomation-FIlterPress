@@ -1,0 +1,25 @@
+;This file allows to adjust object dictionary parameters
+;Note: max. filesize is 4k - comments must start with semicolon
+;
+;USB has to be disconnected and PD4C has to be power cycled after 
+;this file has been modified!
+;
+;----------------------------------------------------------------
+2102:00=0x190009
+
+;when dd4c is set to 1, DIP switches are ignored, no built in task takes control
+dd4c=1
+
+;max current
+2031=2500
+
+;acceleration
+6083=20000
+6048:01=2500
+60C5=100000
+
+;deceleration
+6084=20000
+6049:01=2500
+60C6=100000
+

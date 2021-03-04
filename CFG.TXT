@@ -1,0 +1,43 @@
+
+;EXPLANATION, PLEASE READ FIRST: 
+;--------------------------------------------------------------------------------------------------------------------------------------
+;Firmware version:open file info.bin with texteditor (Format: FIR-vxxxx-Bxxxxx) 
+;A ";"-Sign marks a line as comment (the line has no effect)
+;Max. size of this file is 4k
+;All commands consist of a register number (for example 2031, refere to the manual for futher explanation) and a value 
+;After changing values USB has to be disconnected and you need to power off and on the controller again for the changes to take effect
+
+
+;MOTOR-SETTINGS (for both modes)
+;--------------------------------------------------------------------------------------------------------------------------------------
+;Connect to COM Port
+2102:00=0x190009
+
+;Drive-Mode ,must be 65, bldc motor in  closed loop
+3202=65
+
+;Motor peak Current in mA (default 6250mA = 6,25A)
+2031=6250
+
+;Motor nominal current (I2T protection, see manual) in mA (default)
+203B:01=3125
+
+;max duration of peak current in ms
+;203B:02=1000
+
+;Baud Rate 500
+2005h:00=88
+
+;Node ID
+2009h:00=10
+
+;auto setup
+;6060h:00=-2
+
+;Plug and Drive Interface
+;2291h:04=01
+
+;Save Changes to Controller
+1010h:01=65766173
+
+
